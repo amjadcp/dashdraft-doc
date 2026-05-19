@@ -5,7 +5,7 @@
 # ============================================================
 set -euo pipefail
 
-RELEASE_BASE="https://dashdraft.netlify.app"
+RELEASE_BASE="https://dashdraft.app"
 LATEST_URL="${RELEASE_BASE}/latest.json"
 INSTALL_DIR="${HOME}/.DashDraft"
 BIN_PATH="${INSTALL_DIR}/dashdraft"
@@ -24,7 +24,7 @@ print_error() { echo -e "\n${RED}${BOLD}Error:${RESET} $1\n"; exit 1; }
 
 echo ""
 echo -e "${BOLD}  DashDraft - Local Data Workspace${RESET}"
-echo -e "  ${BLUE}https://dashdraft.netlify.app{RESET}"
+echo -e "  ${BLUE}https://dashdraft.app{RESET}"
 echo ""
 echo "  Installs to ~/.DashDraft/ - no Node.js or admin required."
 echo ""
@@ -139,6 +139,6 @@ echo ""
 echo -e "${BOLD}  Installation complete!${RESET}"
 echo -e "  Dashboard : http://localhost:${PORT}"
 echo -e "  MCP (HTTP): http://localhost:${MCP_PORT}/mcp"
-echo -e "  Docs      : ${BLUE}https://dashdraft.netlify.app/connect${RESET}"
+echo -e "  Docs      : ${BLUE}https://dashdraft.app${RESET}"
 echo ""
 echo -e "  ${YELLOW}Note:${RESET} Open a new terminal or run 'source ~/.zshrc' to use 'dashdraft'."

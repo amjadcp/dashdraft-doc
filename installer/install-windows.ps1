@@ -7,7 +7,7 @@
 $ErrorActionPreference = "Stop"
 $ProgressPreference    = "SilentlyContinue"
 
-$ReleaseBase = "https://dashdraft.netlify.app"
+$ReleaseBase = "https://dashdraft.app"
 $LatestUrl   = "$ReleaseBase/latest.json"
 $InstallDir  = Join-Path $env:LOCALAPPDATA "DashDraft"
 $BinPath     = Join-Path $InstallDir "dashdraft.exe"
@@ -25,7 +25,7 @@ function Write-Fail ($m) { Write-Host "`n  ERROR: $m`n" -ForegroundColor Red; ex
 
 Write-Host ""
 Write-Host "  DashDraft - Local Data Workspace" -ForegroundColor White
-Write-Host "  https://dashdraft.netlify.app" -ForegroundColor Cyan
+Write-Host "  https://dashdraft.app" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "  This installer will:"
 Write-Host "    - Download DashDraft to  $InstallDir"
@@ -193,5 +193,5 @@ Write-Host "    dashdraft tunnel            - Open ngrok HTTPS tunnel"
 Write-Host ""
 Write-Host "  Dashboard : http://localhost:$Port"
 Write-Host "  MCP (HTTP): http://localhost:$McpPort/mcp"
-Write-Host "  Docs      : https://dashdraft.netlify.app/connect" -ForegroundColor Cyan
+Write-Host "  Docs      : https://dashdraft.app" -ForegroundColor Cyan
 Write-Host ""
