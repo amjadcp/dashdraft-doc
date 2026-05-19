@@ -1,13 +1,13 @@
 {
   "version": "1.0.0",
   "win-x64": "https://github.com/amjadcp/dashdraft-doc/releases/download/v1.0.0/dashdraft-win-x64.exe",
-  "win-x64_sha256": "6f5567d2062bdc7fec2bc66cda24ca1ff7108eeb5c4ca3868f50c513f88f6511",
+  "win-x64_sha256": "8320e64a275fc273fcd24b1be1a5ffd5a04415d5a06d339e770e3b2ccbe28b84",
   "macos-x64": "https://github.com/amjadcp/dashdraft-doc/releases/download/v1.0.0/dashdraft-macos-x64",
-  "macos-x64_sha256": "2df403968e513cc75db1d3154ddf8153d3fda182ea6c4cf0008636a86abd101f",
+  "macos-x64_sha256": "9fb76487b307a1b71a6ea6f537d8acc6e328761cb8ad416354d12c1118274454",
   "macos-arm64": "https://github.com/amjadcp/dashdraft-doc/releases/download/v1.0.0/dashdraft-macos-arm64",
-  "macos-arm64_sha256": "72dc0ecb95deb2fc212ec5e476cec7744b28892533f13b76f541b3c525984b9c",
+  "macos-arm64_sha256": "b3361f0bb72444b925ed895282f07c0eb4349ed8626fdef7fdffe468e8892eb4",
   "linux-x64": "https://github.com/amjadcp/dashdraft-doc/releases/download/v1.0.0/dashdraft-linux-x64",
-  "linux-x64_sha256": "bdeb58211cf1dd4ed0509c8c9e5fc4241700d78651d23b7b0edf3397e546d76b",
+  "linux-x64_sha256": "8af2d22fb7da1e73d0834d06d534bd1caca990ddc08e264f41fb7f965f63fd02",
   "linux-arm64": "https://github.com/amjadcp/dashdraft-doc/releases/download/v1.0.0/dashdraft-linux-arm64",
-  "linux-arm64_sha256": "5a06f27e046cde2efff4c9e52bbe67e0bd034def14f3c5640513827cf196786f"
+  "linux-arm64_sha256": "ed57237a36fc70bfebf2484d07d67cd3fc5155bba10cadecc3d2d8aa6d54181f"
 }
