@@ -17,18 +17,18 @@ const sections = [
     items: [
       { label: "Claude Desktop Setup", to: "/docs/claude-setup" },
       { label: "ChatGPT Setup", to: "/docs/chatgpt-setup" },
-      { label: "Troubleshooting", to: "/docs/troubleshooting" },
+      // { label: "Troubleshooting", to: "/docs/troubleshooting" },
     ],
   },
-  {
-    title: "Using DashDraft",
-    items: [
-      { label: "Importing CSV Files", to: "/docs/importing-csv" },
-      { label: "Managing Workspaces", to: "/docs/workspaces" },
-      { label: "Searching & Querying", to: "/docs/querying" },
-      { label: "Viewing SQL History", to: "/docs/sql-history" },
-    ],
-  },
+  // {
+  //   title: "Using DashDraft",
+  //   items: [
+  //     { label: "Importing CSV Files", to: "/docs/importing-csv" },
+  //     { label: "Managing Workspaces", to: "/docs/workspaces" },
+  //     { label: "Searching & Querying", to: "/docs/querying" },
+  //     { label: "Viewing SQL History", to: "/docs/sql-history" },
+  //   ],
+  // },
   {
     title: "Data Privacy",
     items: [
@@ -37,19 +37,19 @@ const sections = [
       { label: "Understanding Data Flow", to: "/docs/data-flow" },
     ],
   },
-  {
-    title: "Sharing with Your Team",
-    items: [
-      { label: "Exporting SQL Logic", to: "/docs/sharing" },
-      { label: "Sharing Chat History", to: "/docs/share-chat" },
-      { label: "Collaborating on Metrics", to: "/docs/collaborate" },
-    ],
-  },
+  // {
+  //   title: "Sharing with Your Team",
+  //   items: [
+  //     { label: "Exporting SQL Logic", to: "/docs/sharing" },
+  //     { label: "Sharing Chat History", to: "/docs/share-chat" },
+  //     { label: "Collaborating on Metrics", to: "/docs/collaborate" },
+  //   ],
+  // },
   {
     title: "FAQ & Support",
     items: [
       { label: "FAQ", to: "/docs/faq" },
-      { label: "Getting Help", to: "/docs/help" },
+      // { label: "Getting Help", to: "/docs/help" },
     ],
   },
 ];

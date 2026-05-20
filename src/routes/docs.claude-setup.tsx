@@ -47,25 +47,24 @@ function Page() {
 }`}
       />
 
-      <Callout variant="tip">
+      {/* <Callout variant="tip">
         Claude Desktop launches DashDraft automatically when you ask a question.
         You don't need to manually run <code>dashdraft start</code> for this setup.
-      </Callout>
+      </Callout> */}
 
       <h2 id="restart">Restart Claude</h2>
       <p>Fully quit Claude (don't just close the window) and reopen it.</p>
 
       <h2 id="verify">Verify the connection</h2>
       <p>
-        You should see a small hammer icon in the chat composer. Ask
-        <em> "List my DashDraft tables"</em> to confirm it works.
+        You should see DashDraft in the connectors' list in the chat composer. Ask <em> "List my DashDraft tables"</em> to confirm it works.
       </p>
 
       <h2 id="troubleshoot">Troubleshooting</h2>
       <ul>
-        <li><strong>No hammer icon?</strong> Check the config file path — it varies by OS.</li>
+        <li><strong>No DashDraft?</strong> Check the config file path — it varies by OS.</li>
         <li><strong>Command not found?</strong> Restart your terminal so <code>dashdraft</code> is on PATH.</li>
-        <li><strong>Still stuck?</strong> Run <code>dashdraft doctor</code> for diagnostics.</li>
+        {/* <li><strong>Still stuck?</strong> Run <code>dashdraft doctor</code> for diagnostics.</li> */}
       </ul>
     </DocsLayout>
   );

@@ -19,9 +19,9 @@ export function Nav() {
           <Link to="/docs/faq" className="text-muted-foreground transition-colors hover:text-foreground">
             FAQ
           </Link>
-          <a href="https://github.com" className="text-muted-foreground transition-colors hover:text-foreground">
+          {/* <a href="https://github.com" className="text-muted-foreground transition-colors hover:text-foreground">
             GitHub
-          </a>
+          </a> */}
         </nav>
         <div className="flex items-center gap-2">
           <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">

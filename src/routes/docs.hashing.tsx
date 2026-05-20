@@ -17,8 +17,8 @@ function Page() {
       toc={[{ id: "mark", label: "Mark a column" }, { id: "behavior", label: "How it appears" }, { id: "team", label: "What your team sees" }]}
     >
       <h2 id="mark">Mark a column as sensitive</h2>
-      <p>In the table view, click the lock icon on any column header. Or via CLI:</p>
-      <CodeBlock language="bash" code="dashdraft hash customers.email customers.full_name" />
+      <p>In the table view, click the lock icon on any column header.</p>
+      {/* <CodeBlock language="bash" code="dashdraft hash customers.email customers.full_name" /> */}
 
       <h2 id="behavior">How it appears</h2>
       <p>The AI receives a deterministic hash like <code>HASH_a3f9</code> instead of the actual value. Equality and joins still work; the underlying string never leaves your machine.</p>

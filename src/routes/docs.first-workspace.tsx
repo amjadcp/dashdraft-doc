@@ -20,15 +20,15 @@ function Page() {
       ]}
     >
       <h2 id="create">Create a workspace</h2>
-      <p>From the UI, click <strong>New workspace</strong> and give it a name (e.g. "Q1 Revenue Review"). Or use the CLI:</p>
-      <CodeBlock language="bash" code='dashdraft workspace create "Q1 Revenue Review"' />
+      <p>From the UI, click <strong>New workspace</strong> and give it a name (e.g. "Q1 Revenue Review").</p>
+      {/* <CodeBlock language="bash" code='dashdraft workspace create "Q1 Revenue Review"' /> */}
 
       <h2 id="add">Add files</h2>
       <p>Drop one or more CSV files into the workspace. DashDraft loads them into DuckDB as tables named after the file.</p>
 
       <h2 id="switch">Switch workspaces</h2>
-      <p>Use the workspace picker in the top bar, or:</p>
-      <CodeBlock language="bash" code="dashdraft workspace use q1-revenue-review" />
+      <p>Use the workspace picker in the top bar</p>
+      {/* <CodeBlock language="bash" code="dashdraft workspace use q1-revenue-review" /> */}
 
       <p>Next: <Link to="/docs/claude-setup">connect Claude Desktop</Link>.</p>
     </DocsLayout>

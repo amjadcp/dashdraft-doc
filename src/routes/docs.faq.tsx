@@ -3,10 +3,12 @@ import { DocsLayout } from "@/components/site/DocsLayout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const Route = createFileRoute("/docs/faq")({
-  head: () => ({ meta: [
-    { title: "FAQ — DashDraft Docs" },
-    { name: "description", content: "Common questions about DashDraft: pricing, privacy, offline use, and more." },
-  ]}),
+  head: () => ({
+    meta: [
+      { title: "FAQ — DashDraft Docs" },
+      { name: "description", content: "Common questions about DashDraft: pricing, privacy, offline use, and more." },
+    ]
+  }),
   component: Page,
 });
 
@@ -18,7 +20,7 @@ const faqs = [
   { q: "How do I switch workspaces?", a: "Use the workspace picker in the top bar, or run dashdraft workspace use <name>." },
   { q: "Can I use both Claude and ChatGPT?", a: "Yes. They can be configured at the same time — Claude over stdio, ChatGPT over the tunnel." },
   { q: "What happens to my data when I uninstall?", a: "Your workspace folder at ~/.dashdraft is left in place. Delete it manually to remove everything." },
-  { q: "How do I update DashDraft?", a: "Run dashdraft update. The CLI fetches the latest binary and replaces itself." },
+  // { q: "How do I update DashDraft?", a: "Run dashdraft update. The CLI fetches the latest binary and replaces itself." },
 ];
 
 function Page() {

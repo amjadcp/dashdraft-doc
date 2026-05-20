@@ -26,8 +26,8 @@ function Page() {
       <p>This launches the local UI at <code>http://localhost:7700</code>.</p>
 
       <h2 id="import">Import a CSV</h2>
-      <p>Drag any CSV file into the workspace panel, or run:</p>
-      <CodeBlock language="bash" code="dashdraft import ./orders.csv" />
+      <p>Drag any CSV file into the workspace panel</p>
+      {/* <CodeBlock language="bash" code="dashdraft import ./orders.csv" /> */}
 
       <h2 id="connect">Connect an AI</h2>
       <ul>
@@ -38,7 +38,7 @@ function Page() {
       <h2 id="ask">Ask your first question</h2>
       <p>
         Open Claude or ChatGPT and ask something like: <em>"What's the average order
-        value per month in my orders dataset?"</em> DashDraft runs the SQL locally and
+          value per month in my orders dataset?"</em> DashDraft runs the SQL locally and
         returns only the result.
       </p>
 

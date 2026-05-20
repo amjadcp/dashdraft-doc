@@ -58,11 +58,12 @@ function Page() {
 
       <h2 id="static">Optional: static ngrok domain</h2>
       <p>If you have a reserved domain in ngrok, pass it to keep the URL stable:</p>
-      <CodeBlock language="bash" code="dashdraft tunnel --domain my-analytics.ngrok.app" />
+      <CodeBlock language="bash" code="dashdraft tunnel --set-domain my-analytics.ngrok.app" />
 
       <h2 id="troubleshoot">Troubleshooting</h2>
       <ul>
         <li><strong>Tunnel won't start?</strong> Double-check the token with <code>dashdraft tunnel --show-token</code>.</li>
+        <li><strong>Static domain not working?</strong> Check the configured domain with <code>dashdraft tunnel --show-domain</code>.</li>
         <li><strong>ChatGPT can't connect?</strong> Make sure the tunnel terminal is still open.</li>
       </ul>
     </DocsLayout>
