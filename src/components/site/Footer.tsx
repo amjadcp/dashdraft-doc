@@ -24,12 +24,12 @@ export function Footer() {
         <FooterCol title="Connect AI" links={[
           { label: "Claude Desktop", to: "/docs/claude-setup" },
           { label: "ChatGPT", to: "/docs/chatgpt-setup" },
-          { label: "Troubleshooting", to: "/docs/troubleshooting" },
+          // { label: "Troubleshooting", to: "/docs/troubleshooting" },
         ]} />
         <FooterCol title="Privacy" links={[
           { label: "How it works", to: "/docs/privacy" },
-          { label: "SQL History", to: "/docs/sql-history" },
-          { label: "Sharing with team", to: "/docs/sharing" },
+          // { label: "SQL History", to: "/docs/sql-history" },
+          // { label: "Sharing with team", to: "/docs/sharing" },
         ]} />
       </div>
       <div className="border-t border-border">
