@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ============================================================
 #  DashDraft Installer - macOS
-#  curl -fsSL https://get.dashdraft.app/mac | bash
+#  curl -fsSL https://dashdraft.app/get/mac.sh | bash
 # ============================================================
 set -euo pipefail
 

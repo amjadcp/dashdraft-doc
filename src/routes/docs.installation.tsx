@@ -4,10 +4,12 @@ import { CodeBlock } from "@/components/site/CodeBlock";
 import { Callout } from "@/components/site/Callout";
 
 export const Route = createFileRoute("/docs/installation")({
-  head: () => ({ meta: [
-    { title: "Installation — DashDraft Docs" },
-    { name: "description", content: "Install DashDraft on macOS, Windows, or Linux. One command, no dependencies." },
-  ]}),
+  head: () => ({
+    meta: [
+      { title: "Installation — DashDraft Docs" },
+      { name: "description", content: "Install DashDraft on macOS, Windows, or Linux. One command, no dependencies." },
+    ]
+  }),
   component: Page,
 });
 
@@ -38,9 +40,9 @@ function Page() {
 
       <h2 id="install">Install</h2>
       <h3>macOS / Linux</h3>
-      <CodeBlock language="bash" code="curl -fsSL https://get.dashdraft.app/mac | bash" />
+      <CodeBlock language="bash" code="curl -fsSL https://dashdraft.app/get/mac.sh | bash" />
       <h3>Windows (PowerShell)</h3>
-      <CodeBlock language="powershell" code="irm https://get.dashdraft.app/win | iex" />
+      <CodeBlock language="powershell" code="irm https://dashdraft.app/get/win.ps1 | iex" />
 
       <p>
         The installer downloads the latest binary, places it on your <code>PATH</code>,

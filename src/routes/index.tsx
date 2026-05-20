@@ -254,11 +254,11 @@ function Install() {
           <div className="space-y-4">
             <div>
               <div className="mb-1.5 text-xs font-medium uppercase tracking-wider text-muted-foreground">macOS / Linux</div>
-              <CodeBlock language="bash" code="curl -fsSL https://get.dashdraft.app/mac | bash" />
+              <CodeBlock language="bash" code="curl -fsSL https://dashdraft.app/get/mac.sh | bash" />
             </div>
             <div>
               <div className="mb-1.5 text-xs font-medium uppercase tracking-wider text-muted-foreground">Windows</div>
-              <CodeBlock language="powershell" code="irm https://get.dashdraft.app/win | iex" />
+              <CodeBlock language="powershell" code="irm https://dashdraft.app/get/win.ps1 | iex" />
             </div>
           </div>
         </div>

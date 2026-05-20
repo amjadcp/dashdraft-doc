@@ -2,7 +2,7 @@
 # ============================================================
 #  DashDraft Installer - Windows
 #  Run in PowerShell (non-admin):
-#    irm https://get.dashdraft.app/win | iex
+#    irm https://dashdraft.app/get/win.ps1 | iex
 # ============================================================
 $ErrorActionPreference = "Stop"
 $ProgressPreference    = "SilentlyContinue"
