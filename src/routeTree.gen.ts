@@ -18,6 +18,7 @@ import { Route as DocsSqlHistoryRouteImport } from './routes/docs.sql-history'
 import { Route as DocsSharingRouteImport } from './routes/docs.sharing'
 import { Route as DocsShareChatRouteImport } from './routes/docs.share-chat'
 import { Route as DocsSampleDataRouteImport } from './routes/docs.sample-data'
+import { Route as DocsReportBugRouteImport } from './routes/docs.report-bug'
 import { Route as DocsQuickStartRouteImport } from './routes/docs.quick-start'
 import { Route as DocsQueryingRouteImport } from './routes/docs.querying'
 import { Route as DocsPrivacyRouteImport } from './routes/docs.privacy'
@@ -75,6 +76,11 @@ const DocsShareChatRoute = DocsShareChatRouteImport.update({
 const DocsSampleDataRoute = DocsSampleDataRouteImport.update({
   id: '/sample-data',
   path: '/sample-data',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsReportBugRoute = DocsReportBugRouteImport.update({
+  id: '/report-bug',
+  path: '/report-bug',
   getParentRoute: () => DocsRoute,
 } as any)
 const DocsQuickStartRoute = DocsQuickStartRouteImport.update({
@@ -159,6 +165,7 @@ export interface FileRoutesByFullPath {
   '/docs/privacy': typeof DocsPrivacyRoute
   '/docs/querying': typeof DocsQueryingRoute
   '/docs/quick-start': typeof DocsQuickStartRoute
+  '/docs/report-bug': typeof DocsReportBugRoute
   '/docs/sample-data': typeof DocsSampleDataRoute
   '/docs/share-chat': typeof DocsShareChatRoute
   '/docs/sharing': typeof DocsSharingRoute
@@ -183,6 +190,7 @@ export interface FileRoutesByTo {
   '/docs/privacy': typeof DocsPrivacyRoute
   '/docs/querying': typeof DocsQueryingRoute
   '/docs/quick-start': typeof DocsQuickStartRoute
+  '/docs/report-bug': typeof DocsReportBugRoute
   '/docs/sample-data': typeof DocsSampleDataRoute
   '/docs/share-chat': typeof DocsShareChatRoute
   '/docs/sharing': typeof DocsSharingRoute
@@ -208,6 +216,7 @@ export interface FileRoutesById {
   '/docs/privacy': typeof DocsPrivacyRoute
   '/docs/querying': typeof DocsQueryingRoute
   '/docs/quick-start': typeof DocsQuickStartRoute
+  '/docs/report-bug': typeof DocsReportBugRoute
   '/docs/sample-data': typeof DocsSampleDataRoute
   '/docs/share-chat': typeof DocsShareChatRoute
   '/docs/sharing': typeof DocsSharingRoute
@@ -234,6 +243,7 @@ export interface FileRouteTypes {
     | '/docs/privacy'
     | '/docs/querying'
     | '/docs/quick-start'
+    | '/docs/report-bug'
     | '/docs/sample-data'
     | '/docs/share-chat'
     | '/docs/sharing'
@@ -258,6 +268,7 @@ export interface FileRouteTypes {
     | '/docs/privacy'
     | '/docs/querying'
     | '/docs/quick-start'
+    | '/docs/report-bug'
     | '/docs/sample-data'
     | '/docs/share-chat'
     | '/docs/sharing'
@@ -282,6 +293,7 @@ export interface FileRouteTypes {
     | '/docs/privacy'
     | '/docs/querying'
     | '/docs/quick-start'
+    | '/docs/report-bug'
     | '/docs/sample-data'
     | '/docs/share-chat'
     | '/docs/sharing'
@@ -359,6 +371,13 @@ declare module '@tanstack/react-router' {
       path: '/sample-data'
       fullPath: '/docs/sample-data'
       preLoaderRoute: typeof DocsSampleDataRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/report-bug': {
+      id: '/docs/report-bug'
+      path: '/report-bug'
+      fullPath: '/docs/report-bug'
+      preLoaderRoute: typeof DocsReportBugRouteImport
       parentRoute: typeof DocsRoute
     }
     '/docs/quick-start': {
@@ -469,6 +488,7 @@ interface DocsRouteChildren {
   DocsPrivacyRoute: typeof DocsPrivacyRoute
   DocsQueryingRoute: typeof DocsQueryingRoute
   DocsQuickStartRoute: typeof DocsQuickStartRoute
+  DocsReportBugRoute: typeof DocsReportBugRoute
   DocsSampleDataRoute: typeof DocsSampleDataRoute
   DocsShareChatRoute: typeof DocsShareChatRoute
   DocsSharingRoute: typeof DocsSharingRoute
@@ -492,6 +512,7 @@ const DocsRouteChildren: DocsRouteChildren = {
   DocsPrivacyRoute: DocsPrivacyRoute,
   DocsQueryingRoute: DocsQueryingRoute,
   DocsQuickStartRoute: DocsQuickStartRoute,
+  DocsReportBugRoute: DocsReportBugRoute,
   DocsSampleDataRoute: DocsSampleDataRoute,
   DocsShareChatRoute: DocsShareChatRoute,
   DocsSharingRoute: DocsSharingRoute,

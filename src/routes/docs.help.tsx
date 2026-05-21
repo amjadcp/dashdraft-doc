@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { DocsLayout } from "@/components/site/DocsLayout";
 
 export const Route = createFileRoute("/docs/help")({
@@ -14,10 +14,10 @@ function Page() {
       breadcrumb={[{ label: "Docs", to: "/docs/installation" }, { label: "FAQ & Support" }, { label: "Help" }]}
     >
       <ul>
-        <li><strong>Diagnostics:</strong> run <code>dashdraft doctor</code> and paste the output in any bug report.</li>
-        <li><strong>Issues:</strong> open a ticket at <a href="https://github.com">github.com/dashdraft/dashdraft</a>.</li>
+        <li><strong>Diagnostics:</strong> Run <code>dashdraft doctor</code> and paste the output inside our <Link to="/docs/report-bug" className="text-primary hover:underline">Bug Report Form</Link>.</li>
+        <li><strong>Issues:</strong> Open a ticket at <a href="https://github.com">github.com/dashdraft/dashdraft</a>.</li>
         <li><strong>Email:</strong> <a href="mailto:support@dashdraft.app">support@dashdraft.app</a> — we usually reply within a day.</li>
-        <li><strong>Community:</strong> the DashDraft Discord is linked from the GitHub readme.</li>
+        <li><strong>Community:</strong> The DashDraft Discord is linked from the GitHub readme.</li>
       </ul>
     </DocsLayout>
   );
