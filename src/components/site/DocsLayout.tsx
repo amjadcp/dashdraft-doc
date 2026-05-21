@@ -3,11 +3,23 @@ import { ChevronRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-const sections = [
+interface DocItem {
+  label: string;
+  to: string;
+  isDanger?: boolean;
+}
+
+interface DocSection {
+  title: string;
+  items: DocItem[];
+}
+
+const sections: DocSection[] = [
   {
     title: "Getting Started",
     items: [
       { label: "Installation", to: "/docs/installation" },
+      { label: "Manual Uninstall", to: "/docs/uninstall", isDanger: true },
       { label: "Quick Start", to: "/docs/quick-start" },
       { label: "First Workspace", to: "/docs/first-workspace" },
     ],
@@ -20,15 +32,16 @@ const sections = [
       // { label: "Troubleshooting", to: "/docs/troubleshooting" },
     ],
   },
-  // {
-  //   title: "Using DashDraft",
-  //   items: [
-  //     { label: "Importing CSV Files", to: "/docs/importing-csv" },
-  //     { label: "Managing Workspaces", to: "/docs/workspaces" },
-  //     { label: "Searching & Querying", to: "/docs/querying" },
-  //     { label: "Viewing SQL History", to: "/docs/sql-history" },
-  //   ],
-  // },
+  {
+    title: "Using DashDraft",
+    items: [
+      { label: "Sample Data & Prompts", to: "/docs/sample-data" },
+      // { label: "Importing CSV Files", to: "/docs/importing-csv" },
+      // { label: "Managing Workspaces", to: "/docs/workspaces" },
+      // { label: "Searching & Querying", to: "/docs/querying" },
+      // { label: "Viewing SQL History", to: "/docs/sql-history" },
+    ],
+  },
   {
     title: "Data Privacy",
     items: [
@@ -89,9 +102,13 @@ export function DocsLayout({
                           to={item.to}
                           className={cn(
                             "block rounded-md px-3 py-1.5 text-sm transition-colors",
-                            active
-                              ? "bg-sidebar-accent font-medium text-sidebar-accent-foreground"
-                              : "text-muted-foreground hover:bg-sidebar-accent/60 hover:text-foreground",
+                            item.isDanger
+                              ? active
+                                ? "bg-red-500/10 font-semibold text-red-500 dark:text-red-400"
+                                : "text-red-500 dark:text-red-400 font-medium hover:bg-red-500/10 hover:text-red-600 dark:hover:text-red-300"
+                              : active
+                                ? "bg-sidebar-accent font-medium text-sidebar-accent-foreground"
+                                : "text-muted-foreground hover:bg-sidebar-accent/60 hover:text-foreground",
                           )}
                         >
                           {item.label}

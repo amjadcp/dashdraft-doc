@@ -12,10 +12,12 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as DocsRouteImport } from './routes/docs'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DocsWorkspacesRouteImport } from './routes/docs.workspaces'
+import { Route as DocsUninstallRouteImport } from './routes/docs.uninstall'
 import { Route as DocsTroubleshootingRouteImport } from './routes/docs.troubleshooting'
 import { Route as DocsSqlHistoryRouteImport } from './routes/docs.sql-history'
 import { Route as DocsSharingRouteImport } from './routes/docs.sharing'
 import { Route as DocsShareChatRouteImport } from './routes/docs.share-chat'
+import { Route as DocsSampleDataRouteImport } from './routes/docs.sample-data'
 import { Route as DocsQuickStartRouteImport } from './routes/docs.quick-start'
 import { Route as DocsQueryingRouteImport } from './routes/docs.querying'
 import { Route as DocsPrivacyRouteImport } from './routes/docs.privacy'
@@ -45,6 +47,11 @@ const DocsWorkspacesRoute = DocsWorkspacesRouteImport.update({
   path: '/workspaces',
   getParentRoute: () => DocsRoute,
 } as any)
+const DocsUninstallRoute = DocsUninstallRouteImport.update({
+  id: '/uninstall',
+  path: '/uninstall',
+  getParentRoute: () => DocsRoute,
+} as any)
 const DocsTroubleshootingRoute = DocsTroubleshootingRouteImport.update({
   id: '/troubleshooting',
   path: '/troubleshooting',
@@ -63,6 +70,11 @@ const DocsSharingRoute = DocsSharingRouteImport.update({
 const DocsShareChatRoute = DocsShareChatRouteImport.update({
   id: '/share-chat',
   path: '/share-chat',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsSampleDataRoute = DocsSampleDataRouteImport.update({
+  id: '/sample-data',
+  path: '/sample-data',
   getParentRoute: () => DocsRoute,
 } as any)
 const DocsQuickStartRoute = DocsQuickStartRouteImport.update({
@@ -147,10 +159,12 @@ export interface FileRoutesByFullPath {
   '/docs/privacy': typeof DocsPrivacyRoute
   '/docs/querying': typeof DocsQueryingRoute
   '/docs/quick-start': typeof DocsQuickStartRoute
+  '/docs/sample-data': typeof DocsSampleDataRoute
   '/docs/share-chat': typeof DocsShareChatRoute
   '/docs/sharing': typeof DocsSharingRoute
   '/docs/sql-history': typeof DocsSqlHistoryRoute
   '/docs/troubleshooting': typeof DocsTroubleshootingRoute
+  '/docs/uninstall': typeof DocsUninstallRoute
   '/docs/workspaces': typeof DocsWorkspacesRoute
 }
 export interface FileRoutesByTo {
@@ -169,10 +183,12 @@ export interface FileRoutesByTo {
   '/docs/privacy': typeof DocsPrivacyRoute
   '/docs/querying': typeof DocsQueryingRoute
   '/docs/quick-start': typeof DocsQuickStartRoute
+  '/docs/sample-data': typeof DocsSampleDataRoute
   '/docs/share-chat': typeof DocsShareChatRoute
   '/docs/sharing': typeof DocsSharingRoute
   '/docs/sql-history': typeof DocsSqlHistoryRoute
   '/docs/troubleshooting': typeof DocsTroubleshootingRoute
+  '/docs/uninstall': typeof DocsUninstallRoute
   '/docs/workspaces': typeof DocsWorkspacesRoute
 }
 export interface FileRoutesById {
@@ -192,10 +208,12 @@ export interface FileRoutesById {
   '/docs/privacy': typeof DocsPrivacyRoute
   '/docs/querying': typeof DocsQueryingRoute
   '/docs/quick-start': typeof DocsQuickStartRoute
+  '/docs/sample-data': typeof DocsSampleDataRoute
   '/docs/share-chat': typeof DocsShareChatRoute
   '/docs/sharing': typeof DocsSharingRoute
   '/docs/sql-history': typeof DocsSqlHistoryRoute
   '/docs/troubleshooting': typeof DocsTroubleshootingRoute
+  '/docs/uninstall': typeof DocsUninstallRoute
   '/docs/workspaces': typeof DocsWorkspacesRoute
 }
 export interface FileRouteTypes {
@@ -216,10 +234,12 @@ export interface FileRouteTypes {
     | '/docs/privacy'
     | '/docs/querying'
     | '/docs/quick-start'
+    | '/docs/sample-data'
     | '/docs/share-chat'
     | '/docs/sharing'
     | '/docs/sql-history'
     | '/docs/troubleshooting'
+    | '/docs/uninstall'
     | '/docs/workspaces'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -238,10 +258,12 @@ export interface FileRouteTypes {
     | '/docs/privacy'
     | '/docs/querying'
     | '/docs/quick-start'
+    | '/docs/sample-data'
     | '/docs/share-chat'
     | '/docs/sharing'
     | '/docs/sql-history'
     | '/docs/troubleshooting'
+    | '/docs/uninstall'
     | '/docs/workspaces'
   id:
     | '__root__'
@@ -260,10 +282,12 @@ export interface FileRouteTypes {
     | '/docs/privacy'
     | '/docs/querying'
     | '/docs/quick-start'
+    | '/docs/sample-data'
     | '/docs/share-chat'
     | '/docs/sharing'
     | '/docs/sql-history'
     | '/docs/troubleshooting'
+    | '/docs/uninstall'
     | '/docs/workspaces'
   fileRoutesById: FileRoutesById
 }
@@ -295,6 +319,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsWorkspacesRouteImport
       parentRoute: typeof DocsRoute
     }
+    '/docs/uninstall': {
+      id: '/docs/uninstall'
+      path: '/uninstall'
+      fullPath: '/docs/uninstall'
+      preLoaderRoute: typeof DocsUninstallRouteImport
+      parentRoute: typeof DocsRoute
+    }
     '/docs/troubleshooting': {
       id: '/docs/troubleshooting'
       path: '/troubleshooting'
@@ -321,6 +352,13 @@ declare module '@tanstack/react-router' {
       path: '/share-chat'
       fullPath: '/docs/share-chat'
       preLoaderRoute: typeof DocsShareChatRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/sample-data': {
+      id: '/docs/sample-data'
+      path: '/sample-data'
+      fullPath: '/docs/sample-data'
+      preLoaderRoute: typeof DocsSampleDataRouteImport
       parentRoute: typeof DocsRoute
     }
     '/docs/quick-start': {
@@ -431,10 +469,12 @@ interface DocsRouteChildren {
   DocsPrivacyRoute: typeof DocsPrivacyRoute
   DocsQueryingRoute: typeof DocsQueryingRoute
   DocsQuickStartRoute: typeof DocsQuickStartRoute
+  DocsSampleDataRoute: typeof DocsSampleDataRoute
   DocsShareChatRoute: typeof DocsShareChatRoute
   DocsSharingRoute: typeof DocsSharingRoute
   DocsSqlHistoryRoute: typeof DocsSqlHistoryRoute
   DocsTroubleshootingRoute: typeof DocsTroubleshootingRoute
+  DocsUninstallRoute: typeof DocsUninstallRoute
   DocsWorkspacesRoute: typeof DocsWorkspacesRoute
 }
 
@@ -452,10 +492,12 @@ const DocsRouteChildren: DocsRouteChildren = {
   DocsPrivacyRoute: DocsPrivacyRoute,
   DocsQueryingRoute: DocsQueryingRoute,
   DocsQuickStartRoute: DocsQuickStartRoute,
+  DocsSampleDataRoute: DocsSampleDataRoute,
   DocsShareChatRoute: DocsShareChatRoute,
   DocsSharingRoute: DocsSharingRoute,
   DocsSqlHistoryRoute: DocsSqlHistoryRoute,
   DocsTroubleshootingRoute: DocsTroubleshootingRoute,
+  DocsUninstallRoute: DocsUninstallRoute,
   DocsWorkspacesRoute: DocsWorkspacesRoute,
 }
 
