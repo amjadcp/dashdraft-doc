@@ -63,6 +63,7 @@ const sections: DocSection[] = [
     items: [
       { label: "FAQ", to: "/docs/faq" },
       // { label: "Getting Help", to: "/docs/help" },
+      { label: "Report a Bug", to: "/docs/report-bug" },
     ],
   },
 ];
