@@ -4,6 +4,7 @@ import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { CodeBlock } from "@/components/site/CodeBlock";
 import { Button } from "@/components/ui/button";
+import { trackInstallButtonClick } from "../lib/analytics";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -50,7 +51,7 @@ function Hero() {
             anything to the cloud. Share the SQL logic with your tech team.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild size="lg" className="h-12 px-6 text-base">
+            <Button asChild size="lg" className="h-12 px-6 text-base" onClick={() => trackInstallButtonClick("unknown", "hero", "click")}>
               <Link to="/docs/installation">
                 Get started <ArrowRight className="ml-1.5 h-4 w-4" />
               </Link>
@@ -247,7 +248,7 @@ function Install() {
               DashDraft ships as a single binary. No Node, no Python, no Docker. Installs in
               under 2 minutes and runs entirely on your computer.
             </p>
-            <Button asChild variant="link" className="mt-3 h-auto px-0 text-base">
+            <Button asChild variant="link" className="mt-3 h-auto px-0 text-base" onClick={() => trackInstallButtonClick("unknown", "quick-install-section", "click")}>
               <Link to="/docs/installation">Read full installation guide <ArrowRight className="ml-1 h-4 w-4" /></Link>
             </Button>
           </div>
@@ -281,7 +282,7 @@ function FinalCTA() {
           Free, local, and ready in two minutes.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Button asChild size="lg" variant="secondary" className="h-12 px-7 text-base">
+          <Button asChild size="lg" variant="secondary" className="h-12 px-7 text-base" onClick={() => trackInstallButtonClick("unknown", "final-cta", "click")}>
             <Link to="/docs/installation">Get started <ArrowRight className="ml-1.5 h-4 w-4" /></Link>
           </Button>
           <Button asChild size="lg" variant="ghost" className="h-12 px-7 text-base text-primary-foreground hover:bg-white/10 hover:text-primary-foreground">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Check, Copy } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { trackInstallButtonClick } from "../../lib/analytics";
 
 interface CodeBlockProps {
   code: string;
@@ -16,6 +17,13 @@ export function CodeBlock({ code, language = "bash", className }: CodeBlockProps
       await navigator.clipboard.writeText(code);
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
+
+      // Automatically track copy event if it's one of the installer scripts
+      if (code.includes("install.sh")) {
+        trackInstallButtonClick("macos", "installation-code-block", "copy");
+      } else if (code.includes("install.ps1")) {
+        trackInstallButtonClick("windows", "installation-code-block", "copy");
+      }
     } catch {
       /* ignore */
     }

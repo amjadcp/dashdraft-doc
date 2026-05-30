@@ -4,6 +4,7 @@ import { CodeBlock } from "@/components/site/CodeBlock";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, ShieldAlert } from "lucide-react";
 import { useState, useEffect } from "react";
+import { trackGithubOpened } from "../lib/analytics";
 
 export const Route = createFileRoute("/docs/report-bug")({
   head: () => ({
@@ -86,7 +87,7 @@ function Page() {
       </p>
       <ul>
         <li>
-          <strong>GitHub Issues:</strong> Create an issue on our official <a href="https://github.com" target="_blank" rel="noreferrer" className="text-primary hover:underline">GitHub repository</a>.
+          <strong>GitHub Issues:</strong> Create an issue on our official <a href="https://github.com" target="_blank" rel="noreferrer" className="text-primary hover:underline" onClick={trackGithubOpened}>GitHub repository</a>.
         </li>
         <li>
           <strong>Direct Email:</strong> Drop us a line at <a href="mailto:support@dashdraft.app" className="text-primary hover:underline">support@dashdraft.app</a>.

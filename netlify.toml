@@ -1,3 +1,19 @@
 [build]
   command = "npm run build"
   publish = "dist/client"
+
+[functions]
+  directory = "netlify/functions"
+  included_files = ["scripts/**"]
+
+[[redirects]]
+  from = "/get/install.sh"
+  to = "/.netlify/functions/install-sh"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/get/install.ps1"
+  to = "/.netlify/functions/install-ps1"
+  status = 200
+  force = true

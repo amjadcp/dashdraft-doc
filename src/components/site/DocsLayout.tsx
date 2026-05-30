@@ -2,6 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { ChevronRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { trackDocsOpened } from "@/lib/analytics";
 
 interface DocItem {
   label: string;
@@ -101,6 +102,7 @@ export function DocsLayout({
                       <li key={item.to}>
                         <Link
                           to={item.to}
+                          onClick={() => trackDocsOpened(item.label, item.to)}
                           className={cn(
                             "block rounded-md px-3 py-1.5 text-sm transition-colors",
                             item.isDanger
