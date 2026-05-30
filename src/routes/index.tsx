@@ -112,7 +112,7 @@ function HeroVisual() {
         </div>
         <div className="mt-4 flex items-center justify-between border-t border-border pt-3 text-[11px] text-muted-foreground">
           <span className="flex items-center gap-1.5"><Lock className="h-3 w-3" /> Raw data never leaves your computer</span>
-          <span className="font-mono">DuckDB · MCP</span>
+          <span className="font-mono">SQL · MCP</span>
         </div>
       </div>
     </div>
@@ -186,7 +186,7 @@ const features = [
   { icon: FlaskConical, title: "POC your metrics", desc: "Test metric definitions before building dashboards. Validate logic with stakeholders. Reduce back-and-forth with tech teams." },
   { icon: History, title: "SQL history for handoff", desc: "Every query is logged automatically. Share exact SQL with developers. Keep a clear audit trail of metric definitions." },
   { icon: MessageSquare, title: "Works with Claude & ChatGPT", desc: "Direct stdio connection for Claude Desktop. Secure ngrok tunnel for ChatGPT. Same data, two AI options." },
-  { icon: Zap, title: "Offline-first & fast", desc: "DuckDB engine for fast local queries. No internet needed after install. Instant workspace switching." },
+  { icon: Zap, title: "Offline-first & fast", desc: "SQL engine for fast local queries. No internet needed after install. Instant workspace switching." },
 ];
 
 function Features() {
@@ -254,11 +254,11 @@ function Install() {
           <div className="space-y-4">
             <div>
               <div className="mb-1.5 text-xs font-medium uppercase tracking-wider text-muted-foreground">macOS / Linux</div>
-              <CodeBlock language="bash" code="curl -fsSL https://dashdraft.app/get/mac.sh | bash" />
+              <CodeBlock language="bash" code="curl -fsSL https://dashdraft.app/get/install.sh | bash" />
             </div>
             <div>
               <div className="mb-1.5 text-xs font-medium uppercase tracking-wider text-muted-foreground">Windows</div>
-              <CodeBlock language="powershell" code="irm https://dashdraft.app/get/win.ps1 | iex" />
+              <CodeBlock language="powershell" code="irm https://dashdraft.app/get/install.ps1 | iex" />
             </div>
           </div>
         </div>

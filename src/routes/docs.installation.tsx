@@ -40,9 +40,9 @@ function Page() {
 
       <h2 id="install">Install</h2>
       <h3>macOS / Linux</h3>
-      <CodeBlock language="bash" code="curl -fsSL https://dashdraft.app/get/mac.sh | bash" />
+      <CodeBlock language="bash" code="curl -fsSL https://dashdraft.app/get/install.sh | bash" />
       <h3>Windows (PowerShell)</h3>
-      <CodeBlock language="powershell" code="irm https://dashdraft.app/get/win.ps1 | iex" />
+      <CodeBlock language="powershell" code="irm https://dashdraft.app/get/install.ps1 | iex" />
 
       <p>
         The installer downloads the latest binary, places it on your <code>PATH</code>,

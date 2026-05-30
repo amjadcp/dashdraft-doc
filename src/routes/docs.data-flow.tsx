@@ -17,7 +17,7 @@ function Page() {
       <h2 id="claude">With Claude Desktop</h2>
       <p>
         Claude spawns DashDraft locally via stdio. Your prompt → Claude API → SQL plan → back
-        to your machine → DuckDB executes → results → Claude API → your screen. The dataset itself
+        to your machine → SQL executes → results → Claude API → your screen. The dataset itself
         never leaves your computer.
       </p>
 

@@ -24,7 +24,7 @@ function Page() {
       {/* <CodeBlock language="bash" code='dashdraft workspace create "Q1 Revenue Review"' /> */}
 
       <h2 id="add">Add files</h2>
-      <p>Drop one or more CSV files into the workspace. DashDraft loads them into DuckDB as tables named after the file.</p>
+      <p>Drop one or more CSV files into the workspace. DashDraft loads them as SQL tables named after the file.</p>
 
       <h2 id="switch">Switch workspaces</h2>
       <p>Use the workspace picker in the top bar</p>

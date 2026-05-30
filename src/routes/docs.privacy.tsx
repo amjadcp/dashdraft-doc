@@ -25,7 +25,7 @@ function Page() {
         <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-[1fr_auto_1fr_auto_1fr]">
           <Box icon={FileSpreadsheet} label="CSV files" sub="On your computer" />
           <ArrowRight className="mx-auto h-5 w-5 text-muted-foreground" />
-          <Box icon={Database} label="DuckDB query" sub="Local, in-process" />
+          <Box icon={Database} label="SQL query" sub="Local, in-process" />
           <ArrowRight className="mx-auto h-5 w-5 text-muted-foreground" />
           <Box icon={Brain} label="AI assistant" sub="Receives results only" />
         </div>

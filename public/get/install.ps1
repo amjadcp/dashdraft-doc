@@ -1,6 +1,6 @@
 Write-Host "=========================================" -ForegroundColor Cyan
 Write-Host "         Welcome to DashDraft            " -ForegroundColor Cyan
-Write-Host "   Your Offline CSV-to-DuckDB Workspace  " -ForegroundColor Cyan
+Write-Host "   Analyze your data with AI. Keep it private" -ForegroundColor Cyan
 Write-Host "=========================================" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "Preparing to set up your DashDraft environment securely..." -ForegroundColor Gray
@@ -47,7 +47,7 @@ Write-Host "=========================================" -ForegroundColor Green
 Write-Host "     DashDraft is Ready to Go!           " -ForegroundColor Green
 Write-Host "=========================================" -ForegroundColor Green
 Write-Host "Next Steps to get started:" -ForegroundColor Yellow
-Write-Host "1. Type 'dashdraft start' in a new terminal to start the Express & DuckDB server." -ForegroundColor White
+Write-Host "1. Type 'dashdraft start' in a new terminal to launch the dashboard" -ForegroundColor White
 Write-Host "2. Or open your Start Menu and search for 'DashDraft' to run the premium UI launcher." -ForegroundColor White
 Write-Host "3. Connect your Claude Desktop client to start querying your data instantly!" -ForegroundColor White
 Write-Host ""
