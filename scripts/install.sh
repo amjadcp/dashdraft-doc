@@ -68,6 +68,8 @@ if [ "$OS" = "Darwin" ]; then
     # Step 3: Security & PATH registration
     echo ""
     echo "🛡️ [Step 3/3] Configuring macOS local security policies..."
+    echo "🔑 Please enter your system password when prompted:"
+    echo ""
     sudo xattr -rd com.apple.quarantine /Applications/DashDraft.app
     sudo chmod -R 755 /Applications/DashDraft.app
     # Create the global CLI symlink pointing to our wrapper script instead of the GUI binary
