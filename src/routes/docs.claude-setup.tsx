@@ -12,7 +12,7 @@ function Page() {
   return (
     <DocsLayout
       title="Connecting to Claude Desktop"
-      description="Claude Desktop connects to DashDraft using MCP stdio. The GUI application provides a built-in setup helper to make configuration seamless."
+      description="Claude Desktop connects to DashDraft using MCP stdio."
       breadcrumb={[{ label: "Docs", to: "/docs/installation" }, { label: "Connecting AI Tools" }, { label: "Claude Desktop" }]}
       toc={[
         { id: "prereqs", label: "Section 1: Prerequisites" },
@@ -21,9 +21,11 @@ function Page() {
         { id: "troubleshoot", label: "Section 4: Troubleshooting" },
       ]}
     >
-      <Callout variant="success">
+      {/* TODO - This section needs to be updated to reflect the new UI */}
+      {/* <Callout variant="success">
+      The GUI application provides a built-in setup helper to make configuration seamless.
         The GUI app includes built-in setup helpers for Claude Desktop. You don't need to manually hunt down hidden folders or remember JSON configurations — the app handles the heavy lifting for you!
-      </Callout>
+      </Callout> */}
 
       <h2 id="prereqs">Section 1: Prerequisites</h2>
       <ul>
@@ -67,13 +69,10 @@ function Page() {
           />
         </li>
         <li>
-          <strong>Open Claude's Config Directory:</strong> Click the <strong>Open Config Folder</strong> link inside the GUI App. DashDraft automatically resolves the file system path for your specific operating system (macOS, Windows, or Linux) and opens the directory in your system file explorer.
+          <strong>Open the Claude config:</strong> Open Claude Desktop, and go to <strong>Settings &rarr; Developer &rarr; Edit config</strong>.
         </li>
         <li>
-          <strong>Edit the Config File:</strong> Open the file named <code>claude_desktop_config.json</code> in your text editor.
-        </li>
-        <li>
-          <strong>Paste the JSON payload:</strong> Paste the copied block into the file. If you already have other MCP servers active, add the <code>"DashDraft"</code> object inside the existing <code>"mcpServers"</code> map.
+          <strong>Edit the Config File:</strong> Paste the copied block into the file. If you already have other MCP servers active, add the <code>"DashDraft"</code> object inside the existing <code>"mcpServers"</code> map.
         </li>
         <li>
           <strong>Save and Close:</strong> Save the changes in your text editor and close the file.
@@ -91,10 +90,13 @@ function Page() {
         <li>Launch Claude Desktop.</li>
         <li>Start a brand new conversation.</li>
         <li>
-          Look at the bottom right of the input composer for a hammer icon (🔨) indicating that local MCP tools are active.
+          Click the <strong>Attachment (+)</strong> icon next to the chat input field.
         </li>
         <li>
-          Hover over or click the hammer icon; <strong>DashDraft</strong> should be listed as an active connector.
+          In the menu, hover over <strong>Connectors</strong>. You should see <strong>dashdraft</strong> listed.
+        </li>
+        <li>
+          Make sure the toggle switch next to <strong>dashdraft</strong> is turned <strong>on</strong> (blue).
         </li>
         <li>
           Test the query loop by asking:

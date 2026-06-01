@@ -92,9 +92,9 @@ function Page() {
         This spins up the same local database system and hosts the dashboard on port <code>7700</code>.
       </p>
       
-      <Callout variant="info" title="Interoperability">
+      {/* <Callout variant="info" title="Interoperability">
         The GUI and CLI connect to the exact same backend service and database workspaces. You can run them at the same time; the GUI will automatically reflect the correct "Running" status if you started DashDraft via the terminal.
-      </Callout>
+      </Callout> */}
 
       <h2 id="dashboard-verify">Navigating your dashboard</h2>
       <p>

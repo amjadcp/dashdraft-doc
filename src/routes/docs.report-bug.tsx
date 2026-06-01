@@ -77,8 +77,8 @@ function Page() {
         </iframe>
       </div>
 
-      {/* Other Help Channels */}
-      <h2 id="alternative" className="mt-12">
+      {/* TODO: Other Help Channels */}
+      {/* <h2 id="alternative" className="mt-12">
         Other support channels
       </h2>
       <p>
@@ -92,7 +92,7 @@ function Page() {
         <li>
           <strong>Direct Email:</strong> Drop us a line at <a href="mailto:support@dashdraft.app" className="text-primary hover:underline">support@dashdraft.app</a>.
         </li>
-      </ul>
+      </ul> */}
     </DocsLayout>
   );
 }

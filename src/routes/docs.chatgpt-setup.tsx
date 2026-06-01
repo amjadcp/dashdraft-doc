@@ -98,10 +98,6 @@ function Page() {
       <p>
         The GUI will display your active public endpoint. Click the blue <strong>Copy</strong> icon button next to the URL to copy it.
       </p>
-      <ul>
-        <li>Random URL looks like: <code>https://abc-123-def.ngrok-free.app/mcp</code></li>
-        <li>Static URL looks like: <code>https://subtle-primary-camel.ngrok-free.app/mcp</code></li>
-      </ul>
 
       <div className="my-8 rounded-lg border border-border bg-card p-2 shadow-md">
         <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground px-2 py-1">GUI ChatGPT Tunnel Interface</p>
@@ -138,19 +134,18 @@ function Page() {
 
       <h3>Step 2: Create your local custom MCP App</h3>
       <ol>
-        <li>While still in the <strong>Settings &rarr; Apps</strong> menu of ChatGPT, click <strong>+ New Custom App</strong>.</li>
+        <li>While still in the <strong>Settings &rarr; Apps</strong> menu of ChatGPT, click <strong>Create App</strong>.</li>
         <li>Fill out the registration details:
           <ul>
             <li><strong>Name:</strong> <code>DashDraft</code></li>
-            <li><strong>MCP Server URL:</strong> Paste the copied HTTPS tunnel URL (e.g. <code>https://subtle-primary-camel.ngrok-free.app/mcp</code>)</li>
+            <li><strong>MCP Server URL:</strong> Paste the copied HTTPS tunnel URL (e.g. <code>https://xxxx-xxxx-xxxx.ngrok-free.app/mcp</code>)</li>
           </ul>
         </li>
         <li>Click <strong>Save</strong> or <strong>Create</strong>.</li>
       </ol>
-
       <h3>Step 3: Test the ChatGPT integration</h3>
       <p>
-        Open a new chat tab and type a workspace diagnostic query:
+        Open a new chat tab, attach the app from the more option in chat attachments dropdown, and type a workspace diagnostic query:
       </p>
       <blockquote className="border-l-4 border-primary/40 bg-secondary/30 p-3 italic my-3 text-foreground/80 rounded">
         "What tables are in my active workspace?"

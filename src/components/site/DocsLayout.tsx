@@ -20,7 +20,6 @@ const sections: DocSection[] = [
     title: "Getting Started",
     items: [
       { label: "Installation", to: "/docs/installation" },
-      { label: "Manual Uninstall", to: "/docs/uninstall", isDanger: true },
       { label: "Starting DashDraft", to: "/docs/quick-start" },
       { label: "First Workspace", to: "/docs/first-workspace" },
       { label: "Advanced: Using the CLI", to: "/docs/advanced-cli" },
@@ -50,6 +49,7 @@ const sections: DocSection[] = [
       { label: "How Privacy Works", to: "/docs/privacy" },
       { label: "Hashing Sensitive Columns", to: "/docs/hashing" },
       { label: "Understanding Data Flow", to: "/docs/data-flow" },
+      { label: "Manual Uninstall", to: "/docs/uninstall", isDanger: true },
     ],
   },
   // {

@@ -97,16 +97,16 @@ function Page() {
 
       <h2 id="compatibility">GUI and CLI compatibility</h2>
       <p>
-        The GUI App and CLI tool are completely interoperable. They connect to the exact same background configurations and databases:
+        The GUI App and CLI tool are completely interoperable. They connect to the exact same background configurations and databases.
       </p>
-      <ul>
+      {/* <ul>
         <li>
           If you run <code>dashdraft start</code> in a terminal, the GUI app will detect the active system process and instantly display a green <span className="inline-flex items-center rounded bg-emerald-500/10 px-2 py-0.5 text-xs font-semibold text-emerald-500">Running</span> indicator.
         </li>
         <li>
           Closing the terminal window or killing the CLI process will transition the GUI Control Center status back to a gray <span className="inline-flex items-center rounded bg-gray-500/10 px-2 py-0.5 text-xs font-semibold text-gray-400">Stopped</span> state.
         </li>
-      </ul>
+      </ul> */}
 
       <div className="my-8 rounded-lg border border-border bg-card p-2 shadow-md">
         <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground px-2 py-1">Advanced Console Logs Preview</p>
