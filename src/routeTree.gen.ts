@@ -32,6 +32,7 @@ import { Route as DocsDataFlowRouteImport } from './routes/docs.data-flow'
 import { Route as DocsCollaborateRouteImport } from './routes/docs.collaborate'
 import { Route as DocsClaudeSetupRouteImport } from './routes/docs.claude-setup'
 import { Route as DocsChatgptSetupRouteImport } from './routes/docs.chatgpt-setup'
+import { Route as DocsAdvancedCliRouteImport } from './routes/docs.advanced-cli'
 
 const DocsRoute = DocsRouteImport.update({
   id: '/docs',
@@ -148,10 +149,16 @@ const DocsChatgptSetupRoute = DocsChatgptSetupRouteImport.update({
   path: '/chatgpt-setup',
   getParentRoute: () => DocsRoute,
 } as any)
+const DocsAdvancedCliRoute = DocsAdvancedCliRouteImport.update({
+  id: '/advanced-cli',
+  path: '/advanced-cli',
+  getParentRoute: () => DocsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/docs': typeof DocsRouteWithChildren
+  '/docs/advanced-cli': typeof DocsAdvancedCliRoute
   '/docs/chatgpt-setup': typeof DocsChatgptSetupRoute
   '/docs/claude-setup': typeof DocsClaudeSetupRoute
   '/docs/collaborate': typeof DocsCollaborateRoute
@@ -177,6 +184,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/docs': typeof DocsRouteWithChildren
+  '/docs/advanced-cli': typeof DocsAdvancedCliRoute
   '/docs/chatgpt-setup': typeof DocsChatgptSetupRoute
   '/docs/claude-setup': typeof DocsClaudeSetupRoute
   '/docs/collaborate': typeof DocsCollaborateRoute
@@ -203,6 +211,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/docs': typeof DocsRouteWithChildren
+  '/docs/advanced-cli': typeof DocsAdvancedCliRoute
   '/docs/chatgpt-setup': typeof DocsChatgptSetupRoute
   '/docs/claude-setup': typeof DocsClaudeSetupRoute
   '/docs/collaborate': typeof DocsCollaborateRoute
@@ -230,6 +239,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/docs'
+    | '/docs/advanced-cli'
     | '/docs/chatgpt-setup'
     | '/docs/claude-setup'
     | '/docs/collaborate'
@@ -255,6 +265,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/docs'
+    | '/docs/advanced-cli'
     | '/docs/chatgpt-setup'
     | '/docs/claude-setup'
     | '/docs/collaborate'
@@ -280,6 +291,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/docs'
+    | '/docs/advanced-cli'
     | '/docs/chatgpt-setup'
     | '/docs/claude-setup'
     | '/docs/collaborate'
@@ -471,10 +483,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsChatgptSetupRouteImport
       parentRoute: typeof DocsRoute
     }
+    '/docs/advanced-cli': {
+      id: '/docs/advanced-cli'
+      path: '/advanced-cli'
+      fullPath: '/docs/advanced-cli'
+      preLoaderRoute: typeof DocsAdvancedCliRouteImport
+      parentRoute: typeof DocsRoute
+    }
   }
 }
 
 interface DocsRouteChildren {
+  DocsAdvancedCliRoute: typeof DocsAdvancedCliRoute
   DocsChatgptSetupRoute: typeof DocsChatgptSetupRoute
   DocsClaudeSetupRoute: typeof DocsClaudeSetupRoute
   DocsCollaborateRoute: typeof DocsCollaborateRoute
@@ -499,6 +519,7 @@ interface DocsRouteChildren {
 }
 
 const DocsRouteChildren: DocsRouteChildren = {
+  DocsAdvancedCliRoute: DocsAdvancedCliRoute,
   DocsChatgptSetupRoute: DocsChatgptSetupRoute,
   DocsClaudeSetupRoute: DocsClaudeSetupRoute,
   DocsCollaborateRoute: DocsCollaborateRoute,

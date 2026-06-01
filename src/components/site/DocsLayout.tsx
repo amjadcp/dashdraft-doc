@@ -21,8 +21,9 @@ const sections: DocSection[] = [
     items: [
       { label: "Installation", to: "/docs/installation" },
       { label: "Manual Uninstall", to: "/docs/uninstall", isDanger: true },
-      { label: "Quick Start", to: "/docs/quick-start" },
+      { label: "Starting DashDraft", to: "/docs/quick-start" },
       { label: "First Workspace", to: "/docs/first-workspace" },
+      { label: "Advanced: Using the CLI", to: "/docs/advanced-cli" },
     ],
   },
   {
