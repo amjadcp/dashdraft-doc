@@ -20,6 +20,7 @@ export function Footer() {
           { label: "Installation", to: "/docs/installation" },
           { label: "Quick Start", to: "/docs/quick-start" },
           { label: "FAQ", to: "/docs/faq" },
+          { label: "Report a Bug", to: "/docs/report-bug" },
         ]} />
         <FooterCol title="Connect AI" links={[
           { label: "Claude Desktop", to: "/docs/claude-setup" },

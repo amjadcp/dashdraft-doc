@@ -21,6 +21,7 @@ function Index() {
         <Features />
         <Scenarios />
         <Install />
+        <DemoVideo />
         <FinalCTA />
       </main>
       <Footer />
@@ -268,12 +269,34 @@ function Install() {
   );
 }
 
+function DemoVideo() {
+  return (
+    <section className="border-b border-border">
+      <div className="container-wide pt-10 pb-2">
+        <SectionHeading eyebrow="See it in action" title="Watch DashDraft at work" />
+        <div className="mt-8 flex justify-center">
+          <div className="relative w-full max-w-4xl h-[400px] overflow-hidden rounded-xl border border-border shadow-[var(--shadow-card)]">
+            <iframe
+              className="absolute left-0 top-0 h-full w-full"
+              src="https://www.youtube.com/embed/41WjCEeXFrY?si=YM7ksjUKTuGWQ6Zk"
+              title="DashDraft Demo"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FinalCTA() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-hero)" }} />
-      <div className="absolute inset-0 -z-10 opacity-30 grid-bg" />
-      <div className="container-wide py-24 text-center">
+    <section className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
+      <div className="absolute inset-0 opacity-30 grid-bg" />
+      <div className="container-wide relative z-10 py-16 text-center">
         <Database className="mx-auto mb-5 h-10 w-10 text-primary-foreground/80" />
         <h2 className="text-4xl font-semibold tracking-tight text-primary-foreground md:text-5xl">
           Start analyzing your data privately

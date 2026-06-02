@@ -49,32 +49,14 @@ function Page() {
       {/* Open Form Button */}
       <div className="my-6 flex flex-wrap gap-4 items-center justify-between p-4 rounded-xl border border-border bg-card shadow-sm">
         <div className="space-y-1">
-          <p className="text-sm font-medium text-foreground">Prefer a full window?</p>
+          <p className="text-sm font-medium text-foreground">Submit Bug Report</p>
           <p className="text-xs text-muted-foreground">You can open the form directly in a new tab if it's easier to fill out.</p>
         </div>
         <Button asChild size="sm" className="gap-1.5 shadow-sm">
-          <a href="https://forms.gle/FLUgSpqn2pLEE2TQ9" target="_blank" rel="noreferrer">
+          <a href="https://forms.gle/FLUgSpqn2pLEE2TQ9" target="_blank" rel="noreferrer" className="!text-white !no-underline">
             Open Form in New Tab <ExternalLink className="h-3.5 w-3.5" />
           </a>
         </Button>
-      </div>
-
-      {/* Embedded Iframe */}
-      <div className="relative w-full rounded-2xl border border-border/80 bg-muted/20 shadow-md overflow-hidden min-h-[700px] md:min-h-[850px] lg:min-h-[900px]">
-        {!iframeLoaded && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-background/50 backdrop-blur-sm z-10 transition-opacity duration-300">
-            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent"></div>
-            <p className="text-sm text-muted-foreground font-medium animate-pulse">Loading bug report form...</p>
-          </div>
-        )}
-        <iframe
-          src="https://forms.gle/FLUgSpqn2pLEE2TQ9"
-          className="w-full h-[700px] md:h-[850px] lg:h-[900px] border-0"
-          onLoad={() => setIframeLoaded(true)}
-          title="DashDraft Bug Report Form"
-        >
-          Loading…
-        </iframe>
       </div>
 
       {/* TODO: Other Help Channels */}
