@@ -41,15 +41,15 @@ function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success/60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-success" />
             </span>
-            Local-first · Zero uploads
+            For Founders, Project Managers & Consultants
           </div>
           <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
             Analyze your data with AI.{" "}
             <span className="gradient-text">Keep it private.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            Ask Claude and ChatGPT questions about your CSV files without uploading
-            anything to the cloud. Share the SQL logic with your tech team.
+            Ask Claude and ChatGPT questions about your large CSV files without uploading
+            anything to the cloud.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg" className="h-12 px-6 text-base" onClick={() => trackInstallButtonClick("unknown", "hero", "click")}>
@@ -63,8 +63,8 @@ function Hero() {
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
             <span className="flex items-center gap-1.5"><Lock className="h-4 w-4" /> Data stays local</span>
-            <span className="flex items-center gap-1.5"><Zap className="h-4 w-4" /> Installs in 2 minutes</span>
-            <span className="flex items-center gap-1.5"><Terminal className="h-4 w-4" /> macOS · Windows · Linux</span>
+            <span className="flex items-center gap-1.5"><Database className="h-4 w-4" /> No database setup</span>
+            <span className="flex items-center gap-1.5"><Terminal className="h-4 w-4" /> No SQL knowledge is required</span>
           </div>
         </div>
 
